@@ -12,5 +12,14 @@ class HomeController{
     public function viewdetails(){
         require __DIR__.'/../views/viewdetails.php';
     }
+    public function authenticate(){
+        require __DIR__.'/../models/authenticate.php';
+    }
+    public function logout(){
+        session_start();
+        session_destroy();
+        header('Location: index.php?page=login');
+        exit;
+    }
 
 }

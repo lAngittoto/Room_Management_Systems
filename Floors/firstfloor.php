@@ -1,17 +1,28 @@
 <?php
-require_once "models/roomdata.php";
+require_once "models/roomdata.php";  // class Rooms
+require_once __DIR__ . "/../models/db.php"; // PDO connection
 
-$firstFloor = [
-    "" => [
-        new Rooms("images/101.jpg","Cozy Single Room","Availabe","A cozy and compact room perfect for solo travelers, offering all the essenntiaL amenities for a comfortable and restful stay.",101,1)
-       
-    ],
-];
+// Kukunin lahat ng rooms na 1st floor (room_number = 100–199)
+$stmt = $pdo->prepare("SELECT * FROM rooms WHERE room_number BETWEEN 100 AND 199 ORDER BY room_number ASC");
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($firstFloor as $floorName => $rooms) {
-   
-    foreach ($rooms as $room) {
-        $room->displayRoom();
-    }
+// Convert bawat row into Rooms object
+$firstFloor = [];
+foreach ($rows as $r) {
+    $firstFloor[] = new Rooms(
+        $r['id'],
+        $r['img'],
+        $r['room_type'],
+        $r['status'],
+        $r['description'],
+        $r['room_number'],
+        $r['people']
+    );
+}
+
+// I-display lahat ng rooms sa first floor
+foreach ($firstFloor as $room) {
+    $room->displayRoom();
 }
 ?>

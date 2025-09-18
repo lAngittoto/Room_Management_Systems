@@ -12,7 +12,7 @@
 
 </head>
 
-<body class=" bg-[#ffffff] font-mono">
+<body class=" bg-[#f8f8f8] font-mono">
     <?= $content ?>
 </body>
 

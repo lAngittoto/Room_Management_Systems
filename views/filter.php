@@ -3,7 +3,7 @@
     <p class=" text-[1rem] sm:text-2xl text-[#333333] ">Browse our available rooms and find the perfect one for your needs.</p>
 </section>
 <section class=" w-screen justify-center items-center flex select-none">
-    <div class="  w-[80%]   border border-[#dcdcdc] rounded-4xl p-10 ">
+    <div class="  w-[80%]   border border-[#dcdcdc] bg-[#ffffff] rounded-4xl p-10 ">
         <form action="">
         <div class=" flex sm:flex-row justify-around items-start flex-col ">
             

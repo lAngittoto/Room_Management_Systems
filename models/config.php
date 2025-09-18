@@ -3,7 +3,7 @@
 $host = 'localhost';      // Usually localhost
 $db   = 'lunera_hotel';   // Your database name
 $user = 'root';           // Your DB username
-$pass = 'philcst123';               // Your DB password
+$pass = 'P@ssw0rd';               // Your DB password
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

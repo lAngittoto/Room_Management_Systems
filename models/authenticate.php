@@ -11,17 +11,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$email]);
     $user = $stmt->fetch();
 
-    if ($user && password_verify($password, $user['password'])) {
-        // Correct password
+    if ($user && $password === $user['password']) {
         $_SESSION['user'] = $user['email'];
-        header('Location: dashboard.php');
+        header('Location: index.php?page=rooms');
         exit;
     } else {
-        // Invalid login
-        echo 'Invalid email or password.';
+        $_SESSION['error'] = "Invalid email or password";
+        header('Location: index.php?page=login');
+        exit;
     }
 } else {
-    header('Location: login.php');
+    header('Location: index.php?page=login');
     exit;
 }
-?>

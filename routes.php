@@ -8,7 +8,7 @@ switch($page){
         case 'login':
         $controller->login();
         break;
-    case'home':
+    case'rooms':
         $controller->rooms();
         break;
     case'mybookings':
@@ -17,6 +17,12 @@ switch($page){
     case'viewdetails':
         $controller->viewdetails();
         break;
+    case'authenticate':
+    $controller->authenticate();
+    break;
+    case'logout':
+        $controller->logout();
+    break;
 
     default:
     http_response_code(404);
