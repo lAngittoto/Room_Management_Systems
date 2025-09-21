@@ -9,6 +9,7 @@ function getAmenityIcon($amenity) {
         "Air Conditioning" => 'fa-solid fa-wind',
         "Television" => 'fa-solid fa-tv',
         "Pillows" => 'fa-solid fa-mattress-pillow',
+        "Wardrobe / desk" => 'fa-solid fa-person',
     ];
 
     return $icons[$amenity] ?? 'fa-solid fa-circle';

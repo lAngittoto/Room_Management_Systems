@@ -21,5 +21,10 @@ class HomeController{
         header('Location: index.php?page=login');
         exit;
     }
-
+    public function dashboard(){
+        require __DIR__.'/../views/dashboard.php';
+    }
+    public function bookroom(){
+        require __DIR__.'/../models/bookroom.php';
+    }
 }

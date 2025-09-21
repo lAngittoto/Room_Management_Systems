@@ -11,15 +11,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$email]);
     $user = $stmt->fetch();
 
-    if ($user && $password === $user['password']) {
-        $_SESSION['user'] = $user['email'];
-        header('Location: index.php?page=rooms');
-        exit;
+if ($user && $password === $user['password']) {
+    $_SESSION['user'] = $user; // buong user data i-save sa session
+    
+    if ($user['role'] === 'admin') {
+        header('Location: index.php?page=dashboard'); // admin dashboard
     } else {
-        $_SESSION['error'] = "Invalid email or password";
-        header('Location: index.php?page=login');
-        exit;
+        header('Location: index.php?page=rooms'); // normal user
     }
+    exit;
+} else {
+    $_SESSION['error'] = "Invalid email or password";
+    header('Location: index.php?page=login');
+    exit;
+}
+
 } else {
     header('Location: index.php?page=login');
     exit;

@@ -23,7 +23,11 @@ switch($page){
     case'logout':
         $controller->logout();
     break;
-
+    case 'dashboard':
+        $controller->dashboard();
+    break;
+    case 'bookroom':
+        $controller->bookroom();
     default:
     http_response_code(404);
     echo "404 Not Found";

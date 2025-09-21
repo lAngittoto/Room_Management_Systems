@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="CSS/fontawesome.min.css">
     <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/login.css">
+     <link rel="stylesheet" href="CSS/dashboard.css">
    <!--npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch-->
   
 
