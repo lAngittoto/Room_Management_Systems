@@ -28,7 +28,9 @@ switch($page){
     break;
     case 'bookroom':
         $controller->bookroom();
-
+    case 'filterrooms':
+        $controller->filterrooms();
+    break;
     default:
     http_response_code(404);
     echo "404 Not Found";
