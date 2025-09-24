@@ -27,4 +27,7 @@ class HomeController{
     public function bookroom(){
         require __DIR__.'/../models/bookroom.php';
     }
+    public function filterrooms(){
+        require __DIR__.'/../views/filterrooms.php';
+    }
 }

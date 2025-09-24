@@ -18,7 +18,7 @@
                         <option value="Single">Single Room</option>
                         <option value="Double">Double Room</option>
                         <option value="Deluxe">Deluxe Room</option>
-                        <option value="Suite">Suite Room</option>
+                        <option value="Triple">Triple Room</option>
                         <option value="Family">Family Room</option>
                     </select>
                 </div>
@@ -29,7 +29,6 @@
                         <option value="FirstFloor">First Floor</option>
                         <option value="SecondFloor">Second Floor</option>
                         <option value="ThirdFloor">Third Floor</option>
-                        <option value="FourthFloor">Fourth Floor</option>
                     </select>
                     <button type="reset" class=" md:w-[200px] w-[150px] border border-[#dcdcdc] rounded p-2 mt-10 cursor-pointer">Reset Filters</button>
                 </div>
