@@ -11,22 +11,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$email]);
     $user = $stmt->fetch();
 
-if ($user && $password === $user['password']) {
-    $_SESSION['user'] = $user; // buong user data i-save sa session
-    
-    if ($user['role'] === 'admin') {
-        header('Location: index.php?page=dashboard'); // admin dashboard
+    if ($user && $password === $user['password']) {
+        $_SESSION['user'] = $user; // buong user data i-save sa session
+        
+        if ($user['role'] === 'admin') {
+            header('Location: /rmsminicapstone/dashboard'); // admin dashboard
+        } else {
+            header('Location: /rmsminicapstone/rooms'); // normal user
+        }
+        exit;
     } else {
-        header('Location: index.php?page=rooms'); // normal user
+        $_SESSION['error'] = "Invalid email or password";
+        header('Location: /rmsminicapstone/login');
+        exit;
     }
-    exit;
-} else {
-    $_SESSION['error'] = "Invalid email or password";
-    header('Location: index.php?page=login');
-    exit;
-}
 
 } else {
-    header('Location: index.php?page=login');
+    header('Location: /rmsminicapstone/login');
     exit;
 }

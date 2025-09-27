@@ -1,15 +1,17 @@
 <?php
 session_start();
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-    header('Location: index.php?page=login');
-    exit;
+header('Location: /rmsminicapstone/login');
+exit;
+
 }
 ob_start();
 ?>
 
 <header>
   <h1>Lunera Hotel</h1>
-  <a href="index.php?page=logout">Log out</a>
+  <a href="/rmsminicapstone/logout">Log out</a>
+
 </header>
 
 <!-- Dashboard Content -->

@@ -19,18 +19,19 @@ switch($page){
         break;
     case'authenticate':
     $controller->authenticate();
-    break;
+        break;
     case'logout':
         $controller->logout();
-    break;
+        break;
     case 'dashboard':
         $controller->dashboard();
-    break;
+        break;
     case 'bookroom':
         $controller->bookroom();
+        break;
     case 'filterrooms':
         $controller->filterrooms();
-    break;
+        break;
     default:
     http_response_code(404);
     echo "404 Not Found";

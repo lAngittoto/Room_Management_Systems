@@ -2,8 +2,9 @@
 session_start();
 require_once __DIR__ . "/../models/db.php";
 
+// ✅ Check user session
 if (!isset($_SESSION['user'])) {
-    header('Location: index.php?page=login');
+    header('Location: /rmsminicapstone/login');
     exit;
 }
 
@@ -12,7 +13,7 @@ $roomId = $_POST['room_id'] ?? null;
 
 if (!$roomId) {
     $_SESSION['error'] = "Invalid request.";
-    header('Location: index.php?page=rooms');
+    header('Location: /rmsminicapstone/rooms');
     exit;
 }
 
@@ -23,7 +24,7 @@ $room = $stmt->fetch();
 
 if (!$room || $room['status'] !== 'Available') {
     $_SESSION['error'] = "This room is not available for booking.";
-    header('Location: index.php?page=rooms');
+    header('Location: /rmsminicapstone/rooms');
     exit;
 }
 
@@ -36,6 +37,6 @@ $stmt = $pdo->prepare("UPDATE rooms SET status='Booked' WHERE id = ?");
 $stmt->execute([$roomId]);
 
 $_SESSION['success'] = "Room booked successfully!";
-header('Location: index.php?page=mybookings');
+header('Location: /rmsminicapstone/mybookings');
 exit;
 ?>

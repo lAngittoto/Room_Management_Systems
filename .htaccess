@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /rmsminicapstone/
+
+# If file or directory exists, do nothing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Page with optional numeric param (e.g., viewdetails/2)
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?page=$1&room=$2 [L,QSA]
+
+# Page only (e.g., login, home, addblog)
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1 [L,QSA]

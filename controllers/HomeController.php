@@ -18,7 +18,7 @@ class HomeController{
     public function logout(){
         session_start();
         session_destroy();
-        header('Location: index.php?page=login');
+        header('Location: /rmsminicapstone/login');
         exit;
     }
     public function dashboard(){

@@ -4,8 +4,9 @@ ob_start();
 
 session_start();
 if (!isset($_SESSION['user'])) {
-    header('Location: index.php?page=login');
-    exit;
+    header('Location: /rmsminicapstone/login');
+exit;
+
 }
 
 require_once __DIR__ . "/../models/db.php";

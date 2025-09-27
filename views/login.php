@@ -7,7 +7,7 @@ ob_start();
     <div class="login-box">
         <h2>Login</h2>
         <p>Please sign in to continue</p>
-        <form action="index.php?page=authenticate" method="POST">
+       <form action="/rmsminicapstone/authenticate" method="POST">
             <label for="email">Email:</label>
             <input id="email" type="email" name="email" required placeholder="user@example.com" />
             
@@ -24,7 +24,7 @@ ob_start();
             <button type="submit">Sign in</button>
         </form>
         <div class="signup-text">
-            <p>Don’t have an account? <a href="index.php?page=signup">Sign up</a></p>
+            <p>Don’t have an account? <a href="/rmsminicapstone/signup">Sign up</a></p>
         </div>
     </div>
 </section>

@@ -9,7 +9,7 @@ require_once __DIR__ . "/../helpers/amenityicon.php";
 
 session_start();
 if (!isset($_SESSION['user'])) {
-    header('Location: index.php?page=login');
+    header('Location: /rmsminicapstone/login');
     exit;
 }
 
@@ -34,7 +34,6 @@ $statusClass = getStatusClass($room['status']);
 ?>
 
 <section class="w-screen bg-[#f8f8f8] p-10 flex flex-row justify-around items-start">
-    <!-- Left side: Room Info -->
     <div class="flex flex-col w-[40%] border border-[#dcdcdc] bg-[#ffffff] text-[#333333]">
         <img src="<?= $room['img'] ?>" alt="Room Image" class="w-screen">
         <div class="p-10">
@@ -61,11 +60,9 @@ $statusClass = getStatusClass($room['status']);
         </div>
     </div>
 
-    <!-- Right side: Booking Form (only if Available) -->
     <?php if ($room['status'] === 'Available'): ?>
     <div class="flex flex-col w-[40%] bg-[#ffffff] p-10 border border-[#dcdcdc] gap-10 cursor-default">
-        <!-- Old design (placeholders + disabled inputs) -->
-        <form method="POST" action="index.php?page=bookroom" class="flex flex-col gap-10">
+        <form method="POST" action="/rmsminicapstone/bookroom" class="flex flex-col gap-10">
             <input type="hidden" name="room_id" value="<?= $room['id'] ?>">
 
             <div class="flex flex-col text-2xl">
