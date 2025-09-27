@@ -24,7 +24,7 @@ class Rooms
         $this->floor = $floor; // 🔥 initialize floor
     }
 
-    public function displayRoom($showFloor = true) // 🔥 optional floor toggle
+    public function displayRoom() // 🔥 optional floor toggle
     {
         echo '<div class="bg-[#ffffff] rounded-t-2xl border border-[#dcdcdc] flex flex-col gap-3 select-none h-full">';
 
