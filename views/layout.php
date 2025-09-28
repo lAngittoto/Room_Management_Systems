@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/login.css">
      <link rel="stylesheet" href="CSS/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
    <!--npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch-->
   
 
