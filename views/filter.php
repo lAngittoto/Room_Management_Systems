@@ -87,7 +87,7 @@ function renderRooms(rooms) {
         <h1 class="text-2xl">${room.room_type}</h1>
         <h1 class="text-[1rem] px-5 py-2 rounded-4xl ${getStatusClass(room.status)}">${room.status}</h1>
       </div>
-
+      <p class="text-lg text-gray-600 px-5"> ${room.floor}</p> <br>
       <p class="p-5 text-[1.2rem] text-[#333333]">${room.description}</p>
 
       <div class="flex flex-row justify-between p-3 mt-auto">
@@ -100,6 +100,7 @@ function renderRooms(rooms) {
           View Details <i class="fa-regular fa-file-lines"></i>
         </a>
       </div>
+      
     `;
     
     roomsContainer.appendChild(div);
