@@ -48,5 +48,5 @@ $availableRooms = $stmt->fetch(PDO::FETCH_ASSOC)['available'];
 
 <?php
 $content = ob_get_clean();
-include "layout.php";
+include __DIR__ . '/../views/layout.php'; // ✅ ayos na path
 ?>

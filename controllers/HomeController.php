@@ -21,9 +21,10 @@ class HomeController{
         header('Location: /rmsminicapstone/login');
         exit;
     }
-    public function dashboard(){
-        require __DIR__.'/../views/dashboard.php';
+  public function dashboard(){
+    require __DIR__.'/../admin/dashboard.php';
     }
+
     public function bookroom(){
         require __DIR__.'/../models/bookroom.php';
     }
