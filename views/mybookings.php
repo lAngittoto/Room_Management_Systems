@@ -39,14 +39,14 @@ if (!$bookedRooms) {
                 
                 <!-- Room Image -->
                 <img src="<?= $room['img'] ?>" alt="Room Image"
-                    class="w-full h-60 object-cover rounded-xl mb-5">
+                    class="w-full h-40 sm:h-60 object-cover rounded-xl mb-5">
 
                 <!-- Room Info -->
-                <h2 class="text-3xl font-bold"><?= $room['room_type'] ?></h2>
-                <p class="text-xl text-gray-700 mb-2">Room <?= $room['room_number'] ?></p>
+                <h2 class="sm:text-3xl font-bold"><?= $room['room_type'] ?></h2>
+                <p class="sm:text-xl text-gray-700 mb-2">Room <?= $room['room_number'] ?></p>
 
                 <!-- Guests -->
-                <p class="mb-2 flex items-center gap-2 text-lg text-gray-700">
+                <p class="mb-2 flex items-center gap-2 sm:text-lg text-gray-700">
                     <i class="fa-regular fa-user text-[#800000]"></i> 
                     <?= $room['people'] ?> Guests
                 </p>
@@ -54,11 +54,11 @@ if (!$bookedRooms) {
                 <!-- Floor -->
                 <div class="flex items-center gap-2 mb-5">
                     <i class="fa-solid fa-building text-[#800000]"></i>
-                    <p class="text-lg text-gray-600"> <?= $room['floor'] ?></p>
+                    <p class="sm:text-lg text-gray-600"> <?= $room['floor'] ?></p>
                 </div>
                 
                 <!-- Check In / Out -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:text-lg">
                     <!-- Check In -->
                     <div class="flex flex-col">
                         <label for="in" class="mb-1 font-medium">Check In</label>
