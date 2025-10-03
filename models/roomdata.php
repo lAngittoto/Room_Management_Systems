@@ -21,10 +21,10 @@ class Rooms
         $this->description = $description;
         $this->RoomNumber = $RoomNumber;
         $this->people = $people;
-        $this->floor = $floor; // 🔥 initialize floor
+        $this->floor = $floor; 
     }
 
-    public function displayRoom() // 🔥 optional floor toggle
+    public function displayRoom() 
     {
         echo '<div class="bg-[#ffffff] rounded-t-2xl border border-[#dcdcdc] flex flex-col sm:gap-3 select-none h-full">';
 
@@ -45,7 +45,7 @@ class Rooms
         echo "<h1 class='lg:text-2xl sm:text-[1.2rem] md:text-[1.6rem] text-[#333333]'><i class='fa-regular fa-user'></i> {$this->people} People</h1>";
         echo "</div>";
 
-        // 🔥 Floor info lang kung gusto ipakita
+        
        
         echo '<div class="flex justify-center w-full">';
         echo "<a href='index.php?page=viewdetails&room={$this->id}' class='w-full text-center px-5 py-3 bg-[#800000] text-white hover:bg-red-900 transition'>View Details <i class='fa-regular fa-file-lines'></i></a>";

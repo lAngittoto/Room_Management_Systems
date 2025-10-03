@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/login.css">
      <link rel="stylesheet" href="CSS/dashboard.css">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
      
    <!--npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch-->
   

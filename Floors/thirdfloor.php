@@ -2,8 +2,8 @@
 require_once __DIR__.'/../models/db.php';
 require_once __DIR__.'/../models/roomdata.php';
 
-// Fetch rooms for First Floor
-$stmt = $pdo->prepare("SELECT * FROM rooms WHERE floor = 'ThirdFloor' ORDER BY room_number");
+// Fetch rooms for Third Floor
+$stmt = $pdo->prepare("SELECT * FROM rooms WHERE floor = 'Third Floor' ORDER BY room_number");
 $stmt->execute();
 $rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
